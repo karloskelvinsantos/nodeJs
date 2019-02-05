@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 mongoose.connect(
-    "mongodb://gustavolimam:Teste@ds221405.mlab.com:21405/omni-backend",
+    "mongodb://goweek:goweek123@ds017584.mlab.com:17584/omnistack-backend-rocketseat",
     {
         useNewUrlParser: true
     }
