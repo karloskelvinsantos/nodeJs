@@ -8,18 +8,21 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
 mongoose.connect(
-    "mongodb://goweek:goweek@172.17.0.2:27017/goweek-db",
+    "mongodb://goweek:goweek123@ds017584.mlab.com:17584/omnistack-backend-rocketseat",
     {
         useNewUrlParser: true
     }
 );
 
+
 app.use((req, res, next) => {
     req.io = io;
+
     return next();
 });
 
-app.use(cors);
+
+app.use(cors());
 app.use(express.json());
 app.use(require("./routes"));
 
